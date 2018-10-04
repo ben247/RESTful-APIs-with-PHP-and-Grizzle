@@ -1,5 +1,5 @@
 <?php
-
+//Guzzle RESTful API request
 require 'vendor/autoload.php';
 use GuzzleHttp\Client;
 $client = new Client();
