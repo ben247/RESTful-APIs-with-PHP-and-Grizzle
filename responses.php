@@ -19,4 +19,10 @@ $response = $client->request(
     'http://jsonplaceholder.typicode.com/users/' . $json->userId
 );
 
+var_dump(json_decode($response->getBody()));
+
+echo $response->getStatusCode();
+echo $response->getReasonPhrase();
+if ($response->getStatusCode() != 200) { echo "Failure"; }
+
 ?>
