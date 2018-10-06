@@ -10,6 +10,13 @@ $response = $client->request(
 );
 
 var_dump($response);
-$body
+$body = $response->getBody();
+$string = $body->getContents();
+$json = json_decode($string);
+
+$response = $client->request(
+    'GET',
+    'http://jsonplaceholder.typicode.com/users/' . $json->userId
+);
 
 ?>
